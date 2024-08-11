@@ -166,7 +166,7 @@ def file_transformation():
     # Loading Database to SQLite
     df_excel.to_sql(table_name, conn, if_exists='append', index=False)
 
-# Calling functions
+# Call functions
 session = sap_connection()
 fbl1h_export(session)
 file_transformation()
@@ -177,6 +177,6 @@ conn.close()
 
 Finally, you have to be aware that SQLite doesn't have all the features that SQL Server, PostgreSQL, etc., have, but it's an easy way to start. When you have more knowledge, you can migrate to a more robust database engine.
 
-You can check the python file in this link: 
+You can check the python file in this link: ![SQLite_Python](python_scripts/sqlite_python.py)
 
 Hope you find it useful! 🙋‍♂️🙋‍♂️🙋‍♂️🙋‍♂️
