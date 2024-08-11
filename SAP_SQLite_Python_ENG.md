@@ -1,4 +1,4 @@
-# How to export an Excel file from SAP with Python and load it to a SQLite Local Database
+# How to Export an Excel File from SAP with Python and Load It into a SQLite Local Database
 
 When I started doing data analysis with SAP transactions, I needed to organize and structure my data over time. Unfortunately, I didn’t have a server available to load the data, and SharePoint's cloud options were quite limited for my needs.
 
@@ -80,9 +80,7 @@ ACHTUNG❗❗❗
 
 In this particular case, I'm fine with Excel files due to the size of the report BUT I need to warn you:
 
-- **If you want to export in an Excel File:** Often takes a bit more time and it opens automatically after you export it so you have to do an aditional step to close it, so you can read it after with pandas.
-
-And, you have to consider the wait time. It may depend of the size of your report. For example, if your report have 500k rows, you tecnically can export  it (since the row liwit in Excel is around 1 million rows) but SAP may crash due the wait time.
+- **If you want to export in an Excel File:** It often takes a bit more time and opens automatically after exporting, so you have to do an additional step to close it before reading it with Pandas. Also, consider the wait time. For example, if your report has 500k rows, you can technically export it (since the row limit in Excel is around 1 million rows), but SAP may crash due to the wait time.
 
 - **If you want to export in an txt/csv File:**: Is faster and it doesn't open automatically but it's a bit tricky if you find some line breaks or you have a text column with '|' character since that character is default SAP delimiter. In a 'Text' column, I often find this '||' 😒 ... With that being said: Be careful.
 
