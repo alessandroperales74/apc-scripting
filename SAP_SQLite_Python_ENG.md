@@ -1,4 +1,4 @@
-# Create a Local Database in SQLite using Python
+# How to export an Excel file from SAP with Python and load it to a SQLite Local Database
 
 When I started doing data analysis with SAP transactions, I needed to organize and structure my data over time. Unfortunately, I didn’t have a server available to load the data, and SharePoint's cloud options were quite limited for my needs.
 
