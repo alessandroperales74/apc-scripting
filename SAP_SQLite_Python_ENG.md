@@ -10,6 +10,8 @@ Even so, it was much easier to migrate data that was already structured and orga
 
 In this case, I’m going to show how I did a very simple - yet effective - ETL to extract data from SAP and load it into SQLite.
 
+## 1. Importing Libraries
+
 ```python
 import win32com.client # For being able to make the connection with SAP and Excel
 import os # Not mandatory, but it gives you some flexibility with folder paths
