@@ -107,7 +107,7 @@ def file_transformation():
     # Converting date columns
     for column in headers:
         if 'fecha' in column:
-            df_excel[column] = pd.to_datetime(df_excel[column],format='%d.%m.%Y',errors='coerce').dt.date
+            df_excel[column] = pd.to_datetime(df_excel[column],format='%d/%m/%Y',errors='coerce').dt.date
 
     # Converting numerical columns
     numerical_columns = (
