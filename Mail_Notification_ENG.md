@@ -30,7 +30,7 @@ I use datetime to add the date in the notification. It's more of a personal appr
 current_time = datetime.now()
 date_format = current_time.strftime('%Y-%m-%d')
 ```
-Then, we declare the paths where will be our files.
+Then, we declare the paths where will be our files. Just make sure that these folders exist in the specified route.
 
 ```python
 filepath = 'C:\\Users\\aperalesc\\Desktop\\github\\python_mails'
