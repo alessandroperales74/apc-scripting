@@ -29,7 +29,7 @@ Normalmente uso datetime para agregar la fecha en la notificación. Es más un e
 current_time = datetime.now()
 date_format = current_time.strftime('%Y-%m-%d')
 ```
-Luego, declaramos las rutas donde estarán nuestros archivos.
+Luego, declaramos las rutas donde estarán nuestros archivos. Asegúrate de que dichas carpetas existan en la ruta especificada.
 
 ```python
 filepath = 'C:\\Users\\aperalesc\\Desktop\\github\\python_mails'
