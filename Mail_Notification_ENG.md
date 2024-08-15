@@ -92,7 +92,7 @@ def send_mails(usermail,username):
 
 At this point, we start reading our dataframe. In this case, I have an excel file with few rows, just for this example, as shown below.
 
-![Image1](images/mails_not_file.jpg)
+![Image1](images/mails_not_file1.jpg)
 
 We use the read_excel function to get the data.
 
