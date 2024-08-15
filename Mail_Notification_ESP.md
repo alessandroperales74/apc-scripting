@@ -112,7 +112,7 @@ Como puedes ver, tenía 4 filas en mis datos, pero solo tres correos diferentes.
 user_mails = set(df['mail'].values)
 ```
 
-## 4. Looping through all mails
+## 4. Iterar a través de todos los correos
 
 Ahora que tenemos los correos electrónicos únicos, añadiremos un bucle For para enviar correos a cada uno en el conjunto. Básicamente, este bucle hace lo siguiente:
 
