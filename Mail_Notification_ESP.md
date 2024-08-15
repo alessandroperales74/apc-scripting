@@ -91,7 +91,7 @@ def send_mails(usermail,username):
 
 En este punto, comenzamos a leer nuestro DataFrame. En este caso, tengo un archivo de Excel con pocas filas, solo para este ejemplo, como se muestra a continuación.
 
-![Image1](images/mails_not_file.jpg)
+![Image1](images/mails_not_file1.jpg)
 
 Usamos la función read_excel para obtener los datos.
 
