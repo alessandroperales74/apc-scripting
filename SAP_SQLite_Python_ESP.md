@@ -77,13 +77,13 @@ def fbl1h_contabilizadas(session):
     session.findById("wnd[1]/usr/ctxtDY_PATH").text = fbl1h_filepath
     session.findById("wnd[1]").sendVKey(11) 
 ```
-¡ATENCIÓN❗❗❗
-
-En este caso particular, estoy bien con los archivos de Excel debido al tamaño del informe PERO debo advertir:
-
-- **Si deseas exportar en un archivo de Excel:** A menudo tarda un poco más y Excel tiende a abrirse automáticamente después de exportar, por lo que -a veces- tienes que hacer un paso adicional para cerrarlo antes de leerlo con Pandas -en este caso, no he tenido problemas pero los tuve en otros scripts-. Además, considera el tiempo de espera. Por ejemplo, si tu informe tiene 500k filas, puedes exportarlo técnicamente (ya que el límite de filas en Excel es alrededor de 1 millón de filas), pero SAP puede fallar debido al tiempo de espera.
-
-- **Si deseas exportar en un archivo txt/csv:** Es más rápido y no se abre automáticamente, pero es un poco complicado si encuentras algunos saltos de línea o tienes una columna de texto con el carácter '|' ya que ese carácter es el delimitador predeterminado de SAP. En una columna de 'Texto', a menudo encuentro este '||' 😒 ... Dicho esto: Ten cuidado.
+>[!WARNING]
+>En este caso particular, estoy bien con los archivos de Excel debido al tamaño del informe PERO debo advertir:
+>
+>- **Si deseas exportar en un archivo de Excel:** A menudo tarda un poco más y Excel tiende a abrirse automáticamente después de exportar, por lo que -a veces- tienes que hacer un paso adicional para cerrarlo antes de leerlo con Pandas -en este caso, no he tenido problemas pero los tuve en otros scripts
+>- Además, considera el tiempo de espera. Por ejemplo, si tu informe tiene 500k filas, puedes exportarlo técnicamente (ya que el límite de filas en Excel es alrededor de 1 millón de filas), pero SAP puede fallar debido al tiempo de espera.
+>
+>- **Si deseas exportar en un archivo txt/csv:** Es más rápido y no se abre automáticamente, pero es un poco complicado si encuentras algunos saltos de línea o tienes una columna de texto con el carácter '|' ya que ese carácter es el delimitador predeterminado de SAP. En una columna de 'Texto', a menudo encuentro este '||' 😒 ... Dicho esto: Ten cuidado.
 
 ## 3. Transformación del Archivo de Excel y Carga en la Base de Datos
 
