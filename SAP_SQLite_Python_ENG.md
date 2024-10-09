@@ -78,13 +78,11 @@ def fbl1h_contabilizadas(session):
     session.findById("wnd[1]/usr/ctxtDY_PATH").text = fbl1h_filepath
     session.findById("wnd[1]").sendVKey(11) 
 ```
-ACHTUNG❗❗❗
-
-In this particular case, I'm fine with Excel files due to the size of the report BUT I need to warn you:
-
-- **If you want to export in an Excel File:** It often takes a bit more time and Excel tends to opens automatically after exporting, so -sometimes- you have to do an additional step to close it before reading it with Pandas -in this case, I haven't had any problems but I did have in another scripts-. Also, consider the wait time. For example, if your report has 500k rows, you can technically export it (since the row limit in Excel is around 1 million rows), but SAP may crash due to the wait time.
-
-- **If you want to export in an txt/csv File:**: Is faster and it doesn't open automatically but it's a bit tricky if you find some line breaks or you have a text column with '|' character since that character is default SAP delimiter. In a 'Text' column, I often find this '||' 😒 ... With that being said: Be careful.
+>[!WARNING]
+>In this particular case, I'm fine with Excel files due to the size of the report BUT I need to warn you:
+>- **If you want to export in an Excel File:** It often takes a bit more time and Excel tends to opens automatically after exporting, so -sometimes- you have to do an additional step to close it before reading it with Pandas -in this case, I haven't had any problems but I did have in another scripts-.
+>- Also, consider the wait time. For example, if your report has 500k rows, you can technically export it (since the row limit in Excel is around 1 million rows), but SAP may crash due to the wait time.
+>- **If you want to export in an txt/csv File:**: Is faster and it doesn't open automatically but it's a bit tricky if you find some line breaks or you have a text column with '|' character since that character is default SAP delimiter. In a 'Text' column, I often find this '||' 😒 ... With that being said: Be careful.
 
 ## 3. Transforming the Excel File and Loading to Database
 
